@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/miwokWordTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Lutti"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/englishWordTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="One"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="15dp"/>
+</LinearLayout>
