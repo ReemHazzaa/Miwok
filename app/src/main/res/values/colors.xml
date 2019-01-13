@@ -4,10 +4,10 @@
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#D81B60</color>
 
-    <color name="numbersColor">@android:color/holo_orange_dark</color>
-    <color name="familyColor">@android:color/holo_green_dark</color>
-    <color name="phrasesColor">@android:color/holo_blue_light</color>
-    <color name="colorsColor">@android:color/holo_purple</color>
+    <color name="numbersColor">#EF6C00</color>
+    <color name="familyColor">#00796B</color>
+    <color name="phrasesColor">#01579B</color>
+    <color name="colorsColor">#7B1FA2</color>
 
     <color name="tan_background">#dec5ae</color>
 </resources>

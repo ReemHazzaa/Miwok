@@ -1,9 +1,14 @@
 package com.example.reem.miwok;
 
-import android.content.Intent;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
+
+
+/**
+ * Displays a {@link ViewPager} where each page shows a different category of the "Miwok" words.
+ */
 
 public class MainActivity extends AppCompatActivity {
 
@@ -11,25 +16,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Find the view pager that will allow the user to swipe between fragments
+        ViewPager viewPager = findViewById(R.id.viewpager);
+
+        // Create an adapter that knows which fragment should be shown on each page
+        FixedTapsPagerAdapter adapter = new FixedTapsPagerAdapter(getSupportFragmentManager());
+
+        // Set the adapter onto the view pager
+        viewPager.setAdapter(adapter);
+
+        // Give the TabLayout the ViewPager
+        TabLayout tabLayout = findViewById(R.id.sliding_tabs);
+        tabLayout.setupWithViewPager(viewPager);
     }
 
-    public void openNumbersList(View view) {
-        Intent intent = new Intent(this,NumbersActivity.class);
-        startActivity(intent);
-    }
-
-    public void openColorsList(View view) {
-        Intent intent = new Intent(this,ColorsActivity.class);
-        startActivity(intent);
-    }
-
-    public void openFamilyList(View view) {
-        Intent intent = new Intent(this,FamilyMembersActivity.class);
-        startActivity(intent);
-    }
-
-    public void openPhrasesList(View view) {
-        Intent intent = new Intent(this,PhrasesActivity.class);
-        startActivity(intent);
-    }
 }
